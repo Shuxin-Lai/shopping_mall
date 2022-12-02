@@ -1,0 +1,19 @@
+version: "3.2" # optional since v1.27.0
+services:
+  mysql:
+    container_name: "v-mall-mysql"
+    image: mysql:8.0.19
+    ports:
+      - "3306:3306"
+    volumes:
+      - $PWD/mysqldata:/data
+    environment:
+      - MYSQL_ROOT_PASSWORD=mysql
+  cache:
+    container_name: "v-mall-redis"
+    image: redis:6.2-alpine
+    ports:
+      - '6379:6379'
+    command: redis-server --save 20 1 --loglevel warning --requirepass redis
+    volumes:
+      - $PWD/redisdata:/data

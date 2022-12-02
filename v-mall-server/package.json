@@ -1,0 +1,24 @@
+{
+  "name": "v-mall-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"**/*.java\" --plugin=./node_modules/prettier-plugin-java",
+    "format:fe": "prettier --write \"**/*.(js|ts|jsx|tsx|json)\"",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.4",
+    "prettier": "2.8.0",
+    "prettier-plugin-java": "^1.6.2"
+  },
+  "lint-staged": {
+    "**/*.(js|ts|jsx|tsx|json)": "npm run format:fe",
+    "**/*.java": "npm run format"
+  }
+}

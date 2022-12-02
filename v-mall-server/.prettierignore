@@ -1,0 +1,7 @@
+foodie-dev-mapper
+foodie-dev-pojo
+
+*.yaml
+package.json
+*.pdma.*
+.version_foodie/*
