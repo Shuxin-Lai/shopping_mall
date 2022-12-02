@@ -10,10 +10,10 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>v-mall-api</module>
-    <module>v-mall-pojo</module>
     <module>v-mall-mapper</module>
     <module>v-mall-service</module>
     <module>v-mall-common</module>
+    <module>v-mall-entity</module>
   </modules>
 
   <parent>
