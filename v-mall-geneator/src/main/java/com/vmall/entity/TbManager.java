@@ -23,25 +23,23 @@ import lombok.experimental.Accessors;
 @TableName("tb_manager")
 public class TbManager implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
 
-    /**
-     * 主键，自增
-     */
-    @TableId(value = "id", type = IdType.AUTO)
-    private Long id;
+  /**
+   * 主键，自增
+   */
+  @TableId(value = "id", type = IdType.AUTO)
+  private Long id;
 
-    /**
-     * 账号
-     */
-    @TableField("username")
-    private String username;
+  /**
+   * 账号
+   */
+  @TableField("username")
+  private String username;
 
-    /**
-     * 密码,bcrype加密
-     */
-    @TableField("password")
-    private String password;
-
-
+  /**
+   * 密码,bcrype加密
+   */
+  @TableField("password")
+  private String password;
 }

@@ -11,7 +11,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author me
@@ -23,67 +23,65 @@ import lombok.experimental.Accessors;
 @TableName("tb_order_shipping")
 public class TbOrderShipping implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
 
-    /**
-     * 订单ID
-     */
-    @TableId("order_id")
-    private String orderId;
+  /**
+   * 订单ID
+   */
+  @TableId("order_id")
+  private String orderId;
 
-    /**
-     * 收货人全名
-     */
-    @TableField("receiver_name")
-    private String receiverName;
+  /**
+   * 收货人全名
+   */
+  @TableField("receiver_name")
+  private String receiverName;
 
-    /**
-     * 固定电话
-     */
-    @TableField("receiver_phone")
-    private String receiverPhone;
+  /**
+   * 固定电话
+   */
+  @TableField("receiver_phone")
+  private String receiverPhone;
 
-    /**
-     * 移动电话
-     */
-    @TableField("receiver_mobile")
-    private String receiverMobile;
+  /**
+   * 移动电话
+   */
+  @TableField("receiver_mobile")
+  private String receiverMobile;
 
-    /**
-     * 省份
-     */
-    @TableField("receiver_state")
-    private String receiverState;
+  /**
+   * 省份
+   */
+  @TableField("receiver_state")
+  private String receiverState;
 
-    /**
-     * 城市
-     */
-    @TableField("receiver_city")
-    private String receiverCity;
+  /**
+   * 城市
+   */
+  @TableField("receiver_city")
+  private String receiverCity;
 
-    /**
-     * 区/县
-     */
-    @TableField("receiver_district")
-    private String receiverDistrict;
+  /**
+   * 区/县
+   */
+  @TableField("receiver_district")
+  private String receiverDistrict;
 
-    /**
-     * 收货地址，如：xx路xx号
-     */
-    @TableField("receiver_address")
-    private String receiverAddress;
+  /**
+   * 收货地址，如：xx路xx号
+   */
+  @TableField("receiver_address")
+  private String receiverAddress;
 
-    /**
-     * 邮政编码,如：310001
-     */
-    @TableField("receiver_zip")
-    private String receiverZip;
+  /**
+   * 邮政编码,如：310001
+   */
+  @TableField("receiver_zip")
+  private String receiverZip;
 
-    @TableField("created")
-    private Date created;
+  @TableField("created")
+  private Date created;
 
-    @TableField("updated")
-    private Date updated;
-
-
+  @TableField("updated")
+  private Date updated;
 }

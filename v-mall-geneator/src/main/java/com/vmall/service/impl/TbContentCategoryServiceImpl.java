@@ -1,9 +1,9 @@
 package com.vmall.service.impl;
 
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.vmall.entity.TbContentCategory;
 import com.vmall.mapper.TbContentCategoryMapper;
 import com.vmall.service.TbContentCategoryService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Service;
  * @since 2022-12-02 11:10:24
  */
 @Service
-public class TbContentCategoryServiceImpl extends ServiceImpl<TbContentCategoryMapper, TbContentCategory> implements TbContentCategoryService {
-
-}
+public class TbContentCategoryServiceImpl
+  extends ServiceImpl<TbContentCategoryMapper, TbContentCategory>
+  implements TbContentCategoryService {}

@@ -13,6 +13,4 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/vmall/tb-item-desc")
-public class TbItemDescController {
-
-}
+public class TbItemDescController {}

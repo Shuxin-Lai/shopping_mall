@@ -9,7 +9,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author me
@@ -21,13 +21,11 @@ import lombok.experimental.Accessors;
 @TableName("tb_test")
 public class TbTest implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
 
-    @TableField("id")
-    private Integer id;
+  @TableField("id")
+  private Integer id;
 
-    @TableField("name")
-    private String name;
-
-
+  @TableField("name")
+  private String name;
 }

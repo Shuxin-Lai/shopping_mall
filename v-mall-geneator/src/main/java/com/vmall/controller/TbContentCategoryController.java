@@ -13,6 +13,4 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/vmall/tb-content-category")
-public class TbContentCategoryController {
-
-}
+public class TbContentCategoryController {}

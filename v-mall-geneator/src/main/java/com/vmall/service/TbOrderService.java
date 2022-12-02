@@ -1,7 +1,7 @@
 package com.vmall.service;
 
-import com.vmall.entity.TbOrder;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.vmall.entity.TbOrder;
 
 /**
  * <p>
@@ -11,6 +11,4 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author me
  * @since 2022-12-02 11:10:24
  */
-public interface TbOrderService extends IService<TbOrder> {
-
-}
+public interface TbOrderService extends IService<TbOrder> {}

@@ -23,31 +23,29 @@ import lombok.experimental.Accessors;
 @TableName("tb_item_desc")
 public class TbItemDesc implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
 
-    /**
-     * 商品ID
-     */
-    @TableId("item_id")
-    private Long itemId;
+  /**
+   * 商品ID
+   */
+  @TableId("item_id")
+  private Long itemId;
 
-    /**
-     * 商品描述
-     */
-    @TableField("item_desc")
-    private String itemDesc;
+  /**
+   * 商品描述
+   */
+  @TableField("item_desc")
+  private String itemDesc;
 
-    /**
-     * 创建时间
-     */
-    @TableField("created")
-    private Date created;
+  /**
+   * 创建时间
+   */
+  @TableField("created")
+  private Date created;
 
-    /**
-     * 更新时间
-     */
-    @TableField("updated")
-    private Date updated;
-
-
+  /**
+   * 更新时间
+   */
+  @TableField("updated")
+  private Date updated;
 }

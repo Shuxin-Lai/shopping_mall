@@ -13,6 +13,5 @@ import org.apache.ibatis.annotations.Mapper;
  * @since 2022-12-02 11:10:24
  */
 @Mapper
-public interface TbContentCategoryMapper extends BaseMapper<TbContentCategory> {
-
-}
+public interface TbContentCategoryMapper
+  extends BaseMapper<TbContentCategory> {}

@@ -24,28 +24,26 @@ import lombok.experimental.Accessors;
 @TableName("tb_item_param_item")
 public class TbItemParamItem implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
 
-    @TableId(value = "id", type = IdType.AUTO)
-    private Long id;
+  @TableId(value = "id", type = IdType.AUTO)
+  private Long id;
 
-    /**
-     * 商品ID
-     */
-    @TableField("item_id")
-    private Long itemId;
+  /**
+   * 商品ID
+   */
+  @TableField("item_id")
+  private Long itemId;
 
-    /**
-     * 参数数据，格式为json格式
-     */
-    @TableField("param_data")
-    private String paramData;
+  /**
+   * 参数数据，格式为json格式
+   */
+  @TableField("param_data")
+  private String paramData;
 
-    @TableField("created")
-    private Date created;
+  @TableField("created")
+  private Date created;
 
-    @TableField("updated")
-    private Date updated;
-
-
+  @TableField("updated")
+  private Date updated;
 }

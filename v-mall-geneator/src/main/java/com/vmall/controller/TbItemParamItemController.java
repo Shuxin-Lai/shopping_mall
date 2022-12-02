@@ -13,6 +13,4 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/vmall/tb-item-param-item")
-public class TbItemParamItemController {
-
-}
+public class TbItemParamItemController {}

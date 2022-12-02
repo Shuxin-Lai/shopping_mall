@@ -13,6 +13,4 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/vmall/tb-test")
-public class TbTestController {
-
-}
+public class TbTestController {}

@@ -1,9 +1,9 @@
 package com.vmall.service.impl;
 
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.vmall.entity.TbItemParam;
 import com.vmall.mapper.TbItemParamMapper;
 import com.vmall.service.TbItemParamService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Service;
  * @since 2022-12-02 11:10:24
  */
 @Service
-public class TbItemParamServiceImpl extends ServiceImpl<TbItemParamMapper, TbItemParam> implements TbItemParamService {
-
-}
+public class TbItemParamServiceImpl
+  extends ServiceImpl<TbItemParamMapper, TbItemParam>
+  implements TbItemParamService {}

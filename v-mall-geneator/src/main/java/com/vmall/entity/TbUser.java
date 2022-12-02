@@ -24,40 +24,38 @@ import lombok.experimental.Accessors;
 @TableName("tb_user")
 public class TbUser implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
 
-    @TableId(value = "id", type = IdType.AUTO)
-    private Long id;
+  @TableId(value = "id", type = IdType.AUTO)
+  private Long id;
 
-    /**
-     * 用户名
-     */
-    @TableField("username")
-    private String username;
+  /**
+   * 用户名
+   */
+  @TableField("username")
+  private String username;
 
-    /**
-     * 密码，加密存储
-     */
-    @TableField("password")
-    private String password;
+  /**
+   * 密码，加密存储
+   */
+  @TableField("password")
+  private String password;
 
-    /**
-     * 注册手机号
-     */
-    @TableField("phone")
-    private String phone;
+  /**
+   * 注册手机号
+   */
+  @TableField("phone")
+  private String phone;
 
-    /**
-     * 注册邮箱
-     */
-    @TableField("email")
-    private String email;
+  /**
+   * 注册邮箱
+   */
+  @TableField("email")
+  private String email;
 
-    @TableField("created")
-    private Date created;
+  @TableField("created")
+  private Date created;
 
-    @TableField("updated")
-    private Date updated;
-
-
+  @TableField("updated")
+  private Date updated;
 }

@@ -14,6 +14,4 @@ import org.springframework.stereotype.Repository;
  * @since 2022-12-02 11:10:24
  */
 @Mapper
-public interface TbTestMapper extends BaseMapper<TbTest> {
-
-}
+public interface TbTestMapper extends BaseMapper<TbTest> {}

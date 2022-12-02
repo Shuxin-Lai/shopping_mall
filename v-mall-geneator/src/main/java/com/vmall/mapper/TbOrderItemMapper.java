@@ -1,7 +1,7 @@
 package com.vmall.mapper;
 
-import com.vmall.entity.TbOrderItem;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.vmall.entity.TbOrderItem;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -13,6 +13,4 @@ import org.apache.ibatis.annotations.Mapper;
  * @since 2022-12-02 11:10:24
  */
 @Mapper
-public interface TbOrderItemMapper extends BaseMapper<TbOrderItem> {
-
-}
+public interface TbOrderItemMapper extends BaseMapper<TbOrderItem> {}

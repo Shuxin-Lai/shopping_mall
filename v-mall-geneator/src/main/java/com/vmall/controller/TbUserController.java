@@ -13,6 +13,4 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/vmall/tb-user")
-public class TbUserController {
-
-}
+public class TbUserController {}

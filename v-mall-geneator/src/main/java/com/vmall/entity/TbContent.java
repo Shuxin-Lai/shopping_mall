@@ -12,7 +12,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author me
@@ -24,64 +24,62 @@ import lombok.experimental.Accessors;
 @TableName("tb_content")
 public class TbContent implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
 
-    @TableId(value = "id", type = IdType.AUTO)
-    private Long id;
+  @TableId(value = "id", type = IdType.AUTO)
+  private Long id;
 
-    /**
-     * 内容类目ID
-     */
-    @TableField("category_id")
-    private Long categoryId;
+  /**
+   * 内容类目ID
+   */
+  @TableField("category_id")
+  private Long categoryId;
 
-    /**
-     * 内容标题
-     */
-    @TableField("title")
-    private String title;
+  /**
+   * 内容标题
+   */
+  @TableField("title")
+  private String title;
 
-    /**
-     * 子标题
-     */
-    @TableField("sub_title")
-    private String subTitle;
+  /**
+   * 子标题
+   */
+  @TableField("sub_title")
+  private String subTitle;
 
-    /**
-     * 标题描述
-     */
-    @TableField("title_desc")
-    private String titleDesc;
+  /**
+   * 标题描述
+   */
+  @TableField("title_desc")
+  private String titleDesc;
 
-    /**
-     * 链接
-     */
-    @TableField("url")
-    private String url;
+  /**
+   * 链接
+   */
+  @TableField("url")
+  private String url;
 
-    /**
-     * 图片绝对路径
-     */
-    @TableField("pic")
-    private String pic;
+  /**
+   * 图片绝对路径
+   */
+  @TableField("pic")
+  private String pic;
 
-    /**
-     * 图片2
-     */
-    @TableField("pic2")
-    private String pic2;
+  /**
+   * 图片2
+   */
+  @TableField("pic2")
+  private String pic2;
 
-    /**
-     * 内容
-     */
-    @TableField("content")
-    private String content;
+  /**
+   * 内容
+   */
+  @TableField("content")
+  private String content;
 
-    @TableField("created")
-    private Date created;
+  @TableField("created")
+  private Date created;
 
-    @TableField("updated")
-    private Date updated;
-
-
+  @TableField("updated")
+  private Date updated;
 }

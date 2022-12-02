@@ -13,6 +13,4 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/vmall/tb-order-shipping")
-public class TbOrderShippingController {
-
-}
+public class TbOrderShippingController {}

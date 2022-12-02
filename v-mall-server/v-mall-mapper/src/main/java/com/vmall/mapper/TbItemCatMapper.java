@@ -13,6 +13,4 @@ import org.apache.ibatis.annotations.Mapper;
  * @since 2022-12-02 11:10:24
  */
 @Mapper
-public interface TbItemCatMapper extends BaseMapper<TbItemCat> {
-
-}
+public interface TbItemCatMapper extends BaseMapper<TbItemCat> {}
