@@ -4,7 +4,11 @@ server:
     uri-encoding: utf-8
   max-http-header-size: 80KB
 
+
 spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
   profiles:
     active: dev
   datasource:
