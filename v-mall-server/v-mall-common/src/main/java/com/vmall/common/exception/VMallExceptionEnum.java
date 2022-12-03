@@ -4,7 +4,8 @@ public enum VMallExceptionEnum {
   SYS_ERROR(20000, "system error"),
   UPDATED_FAILED(190000, "failed to update"),
   INSERTED_FAILED(190001, "failed to insert"),
-  PARA_ERROR(100000, "parameter error");
+  PARA_ERROR(100000, "parameter error"),
+  USER_NOT_EXIST(100001, "user not exist");
 
   private int code;
   private String message;

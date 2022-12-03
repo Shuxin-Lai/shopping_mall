@@ -14,6 +14,7 @@
     <module>v-mall-service</module>
     <module>v-mall-common</module>
     <module>v-mall-entity</module>
+    <module>v-mall-vo</module>
   </modules>
 
   <parent>
