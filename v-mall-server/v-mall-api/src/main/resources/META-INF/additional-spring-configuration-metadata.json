@@ -1,0 +1,24 @@
+{
+  "properties": [
+    {
+      "name": "constant.salt",
+      "type": "java.lang.String",
+      "description": "Encrypt salt"
+    },
+    {
+      "name": "constant.jwt_secret",
+      "type": "java.lang.String",
+      "description": "Jwt secret"
+    },
+    {
+      "name": "constant.jwt_header",
+      "type": "java.lang.String",
+      "description": "Description for constant.jwt_header."
+    },
+    {
+      "name": "constant.jwt_expiration_duration",
+      "type": "java.lang.Integer",
+      "description": "Description for constant.jwt_expiration_duration."
+    }
+  ]
+}

@@ -11,6 +11,7 @@ import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -26,7 +27,10 @@ public class GlobalExceptionHandler {
   @ResponseBody
   public Object handleException(Exception e) {
     logger.error("Default Exception: ", e);
-    return ApiRestResponse.error(VMallExceptionEnum.SYS_ERROR);
+    return ApiRestResponse.error(
+      VMallExceptionEnum.SYS_ERROR.getCode(),
+      e.getMessage()
+    );
   }
 
   @ExceptionHandler(HttpMessageNotReadableException.class)
@@ -38,9 +42,22 @@ public class GlobalExceptionHandler {
     return ApiRestResponse.error(VMallExceptionEnum.PARA_ERROR);
   }
 
+  @ExceptionHandler(MissingServletRequestParameterException.class)
+  @ResponseBody
+  public Object handleMissingServletRequestParameterException(
+    MethodArgumentNotValidException e
+  ) {
+    logger.error("MissingServletRequestParameterException Exception: ", e);
+    String message = e.getMessage();
+    return ApiRestResponse.error(
+      VMallExceptionEnum.PARA_ERROR.getCode(),
+      message
+    );
+  }
+
   @ExceptionHandler(VMallException.class)
   @ResponseBody
-  public Object handleImoocException(VMallException e) {
+  public Object handleVMallException(VMallException e) {
     logger.error("VMall Exception: ", e);
     return ApiRestResponse.error(e.getCode(), e.getMessage());
   }

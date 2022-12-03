@@ -1,9 +1,9 @@
+
 server:
   port: 8100
   tomcat:
     uri-encoding: utf-8
   max-http-header-size: 80KB
-
 
 spring:
   mvc:
@@ -63,3 +63,10 @@ mybatis-plus:
   mapper-locations: classpath:mapper/*.xml          # mapper 层
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+constant:
+  salt: v_mall_salt_oadfka
+  jwt_secret: v_mall_jwt_secret_1da
+  jwt_header: Bearer
+  jwt_expiration_time: 1
