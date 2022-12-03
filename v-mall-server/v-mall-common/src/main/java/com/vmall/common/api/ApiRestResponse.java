@@ -1,5 +1,7 @@
 package com.vmall.common.api;
 
+import com.vmall.common.exception.VMallExceptionEnum;
+
 public class ApiRestResponse<T> {
 
   private static final int SUCCESS_CODE = 200;
@@ -19,16 +21,24 @@ public class ApiRestResponse<T> {
     return success(null);
   }
 
-  public static <T> ApiRestResponse success(T data) {
+  public static <T> ApiRestResponse<T> success(T data) {
     return new ApiRestResponse(SUCCESS_CODE, SUCCESS_MESSAGE, data);
   }
 
-  public static <T> ApiRestResponse error(int code, String message) {
+  public static <T> ApiRestResponse<T> error(int code, String message) {
     return error(code, message, null);
   }
 
-  public static <T> ApiRestResponse error(int code, String message, T data) {
+  public static <T> ApiRestResponse<T> error(int code, String message, T data) {
     return new ApiRestResponse(code, message, data);
+  }
+
+  public static <T> ApiRestResponse<T> error(VMallExceptionEnum sysError) {
+    return new ApiRestResponse<>(
+      sysError.getCode(),
+      sysError.getMessage(),
+      null
+    );
   }
 
   public int getCode() {

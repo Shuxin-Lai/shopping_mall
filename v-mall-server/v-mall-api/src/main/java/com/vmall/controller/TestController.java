@@ -1,6 +1,7 @@
 package com.vmall.controller;
 
 import com.vmall.common.api.ApiRestResponse;
+import com.vmall.common.exception.VMallException;
 import com.vmall.service.TestService;
 import java.util.HashMap;
 import java.util.Map;
@@ -37,5 +38,11 @@ public class TestController {
     data.put("username", "username");
 
     return ApiRestResponse.success(data);
+  }
+
+  @RequestMapping("/throwable")
+  public ApiRestResponse throwable() throws VMallException {
+    testService.shouldThrow();
+    return ApiRestResponse.success();
   }
 }

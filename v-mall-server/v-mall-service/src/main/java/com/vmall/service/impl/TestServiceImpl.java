@@ -1,5 +1,7 @@
 package com.vmall.service.impl;
 
+import com.vmall.common.exception.VMallException;
+import com.vmall.common.exception.VMallExceptionEnum;
 import com.vmall.entity.TbTest;
 import com.vmall.mapper.TbTestMapper;
 import com.vmall.service.TestService;
@@ -21,5 +23,10 @@ public class TestServiceImpl implements TestService {
   public Object findMapper() {
     TbTest tbTest = tbTestMapper.selectById(1);
     return tbTest;
+  }
+
+  @Override
+  public void shouldThrow() throws VMallException {
+    throw new VMallException(VMallExceptionEnum.SYS_ERROR);
   }
 }

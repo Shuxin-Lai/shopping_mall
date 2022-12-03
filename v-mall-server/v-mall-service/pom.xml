@@ -11,7 +11,6 @@
 
   <artifactId>v-mall-service</artifactId>
 
-
   <dependencies>
     <dependency>
       <groupId>com.vmall</groupId>
