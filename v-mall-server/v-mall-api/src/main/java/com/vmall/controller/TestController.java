@@ -1,6 +1,9 @@
 package com.vmall.controller;
 
+import com.vmall.common.api.ApiRestResponse;
 import com.vmall.service.TestService;
+import java.util.HashMap;
+import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,5 +29,13 @@ public class TestController {
   @RequestMapping("/mapper")
   public Object findMapper() {
     return testService.findMapper();
+  }
+
+  @RequestMapping("/restful")
+  public ApiRestResponse testRest() {
+    Map<String, String> data = new HashMap<>();
+    data.put("username", "username");
+
+    return ApiRestResponse.success(data);
   }
 }

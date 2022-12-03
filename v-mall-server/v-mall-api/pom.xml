@@ -18,6 +18,11 @@
     </dependency>
 
     <dependency>
+      <groupId>com.vmall</groupId>
+      <artifactId>v-mall-common</artifactId>
+      <version></version>
+    </dependency>
+    <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
