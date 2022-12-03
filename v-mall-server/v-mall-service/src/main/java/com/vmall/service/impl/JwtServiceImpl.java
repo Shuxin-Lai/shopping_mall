@@ -1,5 +1,6 @@
 package com.vmall.service.impl;
 
+import cn.hutool.json.JSONObject;
 import com.vmall.common.exception.VMallException;
 import com.vmall.common.utils.JwtUtil;
 import com.vmall.service.JwtService;
@@ -30,8 +31,14 @@ public class JwtServiceImpl implements JwtService {
 
   @Override
   public CurrentUser parseForUser(String accessToken) throws VMallException {
-    CurrentUser currentUser = (CurrentUser) JwtUtil.parse(accessToken);
+    JSONObject currentUserPayload = JwtUtil.parse(accessToken);
+    return createCurrentUser(currentUserPayload);
+  }
 
+  private CurrentUser createCurrentUser(JSONObject currentUserPayload) {
+    CurrentUser currentUser = new CurrentUser();
+    currentUser.setEmail((String) currentUserPayload.get("email"));
+    currentUser.setId((Long) currentUserPayload.get("id"));
     return currentUser;
   }
 }

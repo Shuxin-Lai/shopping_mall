@@ -1,9 +1,11 @@
 package com.vmall.controller;
 
+import com.vmall.annotation.User;
 import com.vmall.common.api.ApiRestResponse;
 import com.vmall.common.exception.VMallException;
 import com.vmall.common.utils.JwtUtil;
 import com.vmall.service.TestService;
+import com.vmall.vo.CurrentUser;
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,5 +58,10 @@ public class TestController {
   public ApiRestResponse throwable() throws VMallException {
     testService.shouldThrow();
     return ApiRestResponse.success();
+  }
+
+  @RequestMapping(value = "/annotation", method = { RequestMethod.GET })
+  public ApiRestResponse annotation(@User CurrentUser user) {
+    return ApiRestResponse.success(user);
   }
 }

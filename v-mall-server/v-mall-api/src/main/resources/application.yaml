@@ -69,4 +69,5 @@ constant:
   salt: v_mall_salt_oadfka
   jwt_secret: v_mall_jwt_secret_1da
   jwt_header: Bearer
-  jwt_expiration_time: 1
+  jwt_expiration_time: 360000
+  token_header: Authorization

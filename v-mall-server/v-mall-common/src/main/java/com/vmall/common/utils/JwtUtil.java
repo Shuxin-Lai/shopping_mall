@@ -2,6 +2,7 @@ package com.vmall.common.utils;
 
 import cn.hutool.core.exceptions.ValidateException;
 import cn.hutool.core.util.StrUtil;
+import cn.hutool.json.JSONObject;
 import cn.hutool.jwt.JWT;
 import cn.hutool.jwt.JWTUtil;
 import cn.hutool.jwt.JWTValidator;
@@ -27,15 +28,20 @@ public class JwtUtil {
       .sign();
   }
 
-  public static Object parse(String token) throws VMallException {
+  public static JSONObject parse(String token) throws VMallException {
     String normalizedToken = StrUtil
       .replaceFirst(token, Constant.JWT_HEADER, "")
       .trim();
-    boolean verify = JWTUtil.verify(
-      normalizedToken,
-      Constant.JWT_SECRET.getBytes()
-    );
-    if (!verify) {
+
+    try {
+      boolean verify = JWTUtil.verify(
+        normalizedToken,
+        Constant.JWT_SECRET.getBytes()
+      );
+      if (!verify) {
+        throw new VMallException(VMallExceptionEnum.INVALID_TOKEN);
+      }
+    } catch (Exception e) {
       throw new VMallException(VMallExceptionEnum.INVALID_TOKEN);
     }
 

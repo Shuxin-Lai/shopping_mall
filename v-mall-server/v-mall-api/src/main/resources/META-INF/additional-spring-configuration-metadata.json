@@ -16,9 +16,14 @@
       "description": "Description for constant.jwt_header."
     },
     {
-      "name": "constant.jwt_expiration_duration",
+      "name": "constant.jwt_expiration_time",
       "type": "java.lang.Integer",
-      "description": "Description for constant.jwt_expiration_duration."
+      "description": "Description for constant.jwt_expiration_time."
+    },
+    {
+      "name": "constant.token_header",
+      "type": "java.lang.String",
+      "description": "Description for constant.token_header."
     }
   ]
 }

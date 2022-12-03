@@ -10,6 +10,7 @@ public class Constant {
   public static String JWT_SECRET = null;
   public static String JWT_HEADER = null;
   public static Integer JWT_EXPIRATION_TIME = null;
+  public static String TOKEN_HEADER = null;
 
   @Value("${constant.salt}")
   public void setSALT(String SALT) {
@@ -29,5 +30,10 @@ public class Constant {
   @Value("${constant.jwt_expiration_time}")
   public void setJwtExpirationTime(Integer jwtExpirationTime) {
     JWT_EXPIRATION_TIME = jwtExpirationTime;
+  }
+
+  @Value("${constant.token_header}")
+  public void setTokenHeader(String tokenHeader) {
+    TOKEN_HEADER = tokenHeader;
   }
 }
